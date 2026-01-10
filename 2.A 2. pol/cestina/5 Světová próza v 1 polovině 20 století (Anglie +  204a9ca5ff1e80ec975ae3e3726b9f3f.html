@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5. Světová próza v 1. polovině 20. století (Anglie + USA) </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="204a9ca5-ff1e-80ec-975a-e3e3726b9f3f" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🇺🇸</span></div><h1 class="page-title" dir="auto">5. Světová próza v 1. polovině 20. století (Anglie + USA) </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="204a9ca5-ff1e-8008-ad30-e9458f8d3d16" class=""><mark class="highlight-red">Anglie</mark></h2></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-80ea-a729-db5060eec254" class=""><mark class="highlight-orange">James Joyce</mark></h3></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-800d-8383-d6a897b5e42d" class="bulleted-list"><li style="list-style-type:disc">irský spisovatel, píše anglicky,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8043-805b-fd0f4886692c" class="bulleted-list"><li style="list-style-type:disc">moderní experimentální próza,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8053-9824-c31f56b72a63" class="bulleted-list"><li style="list-style-type:disc">* Dublin, † Curych,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80de-a7cb-d12d658ee67a" class="bulleted-list"><li style="list-style-type:disc">většina života stráveno v Paříži</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80a0-91ad-d50ccd886920" class="bulleted-list"><li style="list-style-type:disc">chytrý, vzdělaný (ovládal 11 jazyků),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80d8-88c4-d63646a8c192" class="bulleted-list"><li style="list-style-type:disc">slepej pičus (paralela s Homérem),</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-80ad-9516-c22a8f52d8b4" class=""><mark class="highlight-teal">Odysseus</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8037-9204-fdb37de5cb8c" class="bulleted-list"><li style="list-style-type:disc">paralela s Homérovou Odysseou,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8075-a5bc-f3a56f490e5a" class="bulleted-list"><li style="list-style-type:disc">destrukce tradičního románu → <mark class="highlight-blue">experimentální próza</mark> - píše na hranici smysluplnosti (kdo posune literaturu dál, píše nesmysly),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8078-886f-f66ab925696d" class="bulleted-list"><li style="list-style-type:disc">založena na setkávání postav, nemá klasický děj, složitý - hraje si s jazykem,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8074-be95-ff185dd195fe" class="bulleted-list"><li style="list-style-type:disc">encyklopedie (poznatky z filosofie, historie, botaniky, ekonomie atd…)</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80db-9d3f-d927e240380b" class="bulleted-list"><li style="list-style-type:disc">putování Blooma = putování Odyssea,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-809f-af5a-f3dce28db856" class="bulleted-list"><li style="list-style-type:disc">co zažije Odysseus za měsíc, Bloom zažije za den,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-804a-b333-e30520fb6d83" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Metoda proudu vědomí</mark> - popisuje myšlenky bez chronologického uspořádání, nemá dějovou linii, čtenář volně pluje mezi pocity, emocemi, vzpomínkami, důraz na jazyk,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80fc-b0d8-c4eea20b9be2" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">postavy:</span><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-807e-be58-e2555377b2d8" class="bulleted-list"><li style="list-style-type:circle">Leopold Bloom = Odysseus - průměrný člověk</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8035-bcb5-cab9c80e9af0" class="bulleted-list"><li style="list-style-type:circle">Molly Bloomová = Peneloppe - nevěrná</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8092-bb9f-e0b3ad16f410" class="bulleted-list"><li style="list-style-type:circle">Štěpán Dedalus = Telemachus - intelektuální, syn Leopolda (potkají se náhodně)</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80b0-b3dc-e0ca743d334f" class="bulleted-list"><li style="list-style-type:circle">(paralely se starověkým mýtem)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8011-89e9-f40405f75690" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">forma:</span><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80bf-9724-f4d3cb34e21d" class="bulleted-list"><li style="list-style-type:circle">kapitoly odlišeny místem, dějem, stylem, barvou, částí lidského těla ↓</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8061-8057-ef096812e504" class="bulleted-list"><li style="list-style-type:circle"><em>Sirény - koncertní síň, ucho…</em></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80a6-ba80-cb0aed2e726c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Bloomsday </mark><mark class="highlight-default">(16. červen),</mark></li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8063-9f90-feb8af125d6a" class=""><mark class="highlight-orange">George Bernard Shaw</mark></h3></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80da-907b-fe3eb32419bc" class="bulleted-list"><li style="list-style-type:disc">* Dublin</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8096-83a3-f11fd1cccd5c" class="bulleted-list"><li style="list-style-type:disc">anglický dramatik, kritik, esejista, irského původu</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8050-b8bf-cfbf6ab1c99d" class="bulleted-list"><li style="list-style-type:disc">nobelova cena za literaturu</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80c4-9376-df1cb27f195e" class="bulleted-list"><li style="list-style-type:disc">jeden z nejčtenějších</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8022-ba22-f26749ee9346" class="bulleted-list"><li style="list-style-type:disc">mistr vtipu a satiry, kritik pokrytectví a falešnosti, utvářel veř. mínění</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80f7-ab15-cbaaff6af85f" class="bulleted-list"><li style="list-style-type:disc">přes 70 divadelních her</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-807f-a318-ecce8e8b7988" class="bulleted-list"><li style="list-style-type:disc"><em>“inteligentní lidi ví že lze věřit jen polovině toho co slyší, velice inteligentní vědí které polovině”</em></li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-80e5-a2a3-d8ebfdb0bfbd" class=""><mark class="highlight-teal">Pygmalion</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-804a-86f3-ec6919487769" class="bulleted-list"><li style="list-style-type:disc">divadelní hra, interpretace → muzikál <em>“</em><em><mark class="highlight-teal">My Fair Lady</mark></em><em>”</em></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80a4-aedb-d9f42a31754f" class="bulleted-list"><li style="list-style-type:disc">slavná komedie,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80ac-9ded-ee2c209057f0" class="bulleted-list"><li style="list-style-type:disc">téma - proměna, láska, nevyváženost,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8004-b2f3-ed69a1789ca8" class="bulleted-list"><li style="list-style-type:disc">problémy s překladem, čeština není tak fonetická (<mark class="highlight-blue">fonetika </mark>- obor jazykovědy, zabývá se výslovností),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-805e-9168-da0a63d2d5e0" class="bulleted-list"><li style="list-style-type:disc">předloha - řecká báj,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e1-aa82-db7d39b30523" class="bulleted-list"><li style="list-style-type:disc">postavy:<div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e2-8e02-cbbf04fd7ec8" class="bulleted-list"><li style="list-style-type:circle">profesor fonetiky Higgins - samotář, nemá rád společnost žen, vnímá Lízu jako zdroj materiálů</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8068-994d-ce9b5ce7d4f7" class="bulleted-list"><li style="list-style-type:circle">plukovník Pickering - jeho přítel, taky osamělý, ale ženy uznává</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8003-a989-d56c21b865be" class="bulleted-list"><li style="list-style-type:circle">Líza Doolittlová - květinářka, neumí číst ani psát, nemluví spisovně,</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80b1-9cb3-ce74dfbdc266" class="bulleted-list"><li style="list-style-type:disc">Higgins potká lízu na ulici a vnímá její jazyk,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8009-89d6-c51c6c5336e6" class="bulleted-list"><li style="list-style-type:disc">Higgins a Pickering se vsadí, jestli z ní dokáže Higgins dokáže udělat dámu,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8030-8caf-d99222db3d78" class="bulleted-list"><li style="list-style-type:disc">Líza se nastěhuje k Higginsovi domů (nakládá s ní jako s hadrem),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8091-be99-d81f2f9c5309" class="bulleted-list"><li style="list-style-type:disc">učí ji stolování, slušnému chování, oblékání, hygieně,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803b-80e7-d9da1c65c5ad" class="bulleted-list"><li style="list-style-type:disc">Higgins ji vytahuje do společností (teta -, recepce +),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80a7-bed0-cde0d7f865f7" class="bulleted-list"><li style="list-style-type:disc">Lízá odchází pryč za jiným mladíkem,</li></ul></div><div style="display:contents" dir="auto"><h2 id="204a9ca5-ff1e-806a-a57c-d16f9c1452a2" class=""><mark class="highlight-red">USA</mark></h2></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8007-826c-f0b3df297680" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">“ztracená generace”</mark><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8087-94a0-cfa89a0cf557" class="bulleted-list"><li style="list-style-type:circle">poznamenaní z 1.světové války</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80ef-a3e2-c2dd16213065" class="bulleted-list"><li style="list-style-type:circle">nepochopení k americkému snu</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80af-9fc3-d91df215aea6" class="bulleted-list"><li style="list-style-type:circle">časté téma je sklamání, skepse, útěk k přírodě nebo kultuře</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8084-b86f-ffbc93502270" class="bulleted-list"><li style="list-style-type:circle">většinou američani a remarque</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8019-a2b6-e6de02d81ac0" class="bulleted-list"><li style="list-style-type:circle">žijí s hrůznými vzpomínkami z války, nejsou schopni svobodně žít,</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8029-b50b-eac073933fd9" class=""><mark class="highlight-orange"> Ernest Hemingway</mark></h3></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8019-b210-d68e6d19c4a3" class="bulleted-list"><li style="list-style-type:disc">jezdil se sanitkou na italské frontě za 1. sv</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-806c-a365-d2e03b9a1113" class="bulleted-list"><li style="list-style-type:disc">první ranění amík 1. sv</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80c0-bfa2-cf074874beed" class="bulleted-list"><li style="list-style-type:disc">je svědkem hrůzy války na vojácích v lágru (zdroje pro svůj román),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8046-b298-c32a9fcf0052" class="bulleted-list"><li style="list-style-type:disc">po zhroucení už ve 2. sv nebojuje</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80de-bdf4-ec4b0d4827b4" class="bulleted-list"><li style="list-style-type:disc">svědek občanské války ve Španělsku,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8089-b100-ce37b9f5e828" class="bulleted-list"><li style="list-style-type:disc">pak žije a píše v americe,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-802f-b0c8-dea9bd17e510" class="bulleted-list"><li style="list-style-type:disc">má trauma → utíká k přírodě, chodí lovit ryby, miluje koridu a divoká zvířata,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80ff-b1c6-fb37f99e62b9" class="bulleted-list"><li style="list-style-type:disc">pak se zastřelil,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e0-bb62-dda1f99ff264" class="bulleted-list"><li style="list-style-type:disc">píše o situacích mezi životem a smrtí → <mark class="highlight-blue">mezní životní situace</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-806b-a4b6-dfb41d032da9" class="bulleted-list"><li style="list-style-type:disc">postavy prokazují mužnost, nesou stopy autora → píše o mužích</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80bd-b21e-c1491e5a4e23" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">“metoda ledovce” - </mark><mark class="highlight-default">příběh působí jednoduše, ale má hlubší význam</mark></li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-800f-84e8-dd65f7f30013" class=""><mark class="highlight-teal">Sbohem, armádo</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-806b-819b-e6b347453f9d" class="bulleted-list"><li style="list-style-type:disc">inspirovaná zážitky z první světové,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80c1-bf7e-c11cc931ea66" class="bulleted-list"><li style="list-style-type:disc">zraněný řidič sanitky (Frederic) je odvezen do lágru → zamiluje se do sestřičky → dezertují do Švýcarska (hrozí jim kulka) → otěhotní a umře při porodu,</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-802a-9f9c-cd2842ad770e" class=""><mark class="highlight-teal">Komu zvoní hrana</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803c-a05c-d40043ead3a4" class="bulleted-list"><li style="list-style-type:disc">umíráček, zvonění kostela kvůli smrti (metafora),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e1-9c1e-fe9cb4fc7350" class="bulleted-list"><li style="list-style-type:disc"><em>„každý nesmyslně padlý voják byl kus něčího života“ - (když někdo umře, umře i část lidstva a část mě)</em></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80fe-ac2e-e6723a189b76" class="bulleted-list"><li style="list-style-type:disc">během občanské války ve Španělsku (<mark class="highlight-default">autobiografický prvek</mark>),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8083-bf39-e39b80473aa5" class="bulleted-list"><li style="list-style-type:disc">učitel španělštiny Robert (Američan), přidal se k partyzánům (antifašista),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8078-9bdf-ccf41a367409" class="bulleted-list"><li style="list-style-type:disc">úkol - odpálit důležitý most, Robert si při útěku zlomil nohu a nedokázal prchat bez pomoci,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8048-8398-de5a4100e266" class="bulleted-list"><li style="list-style-type:disc">dilema → nechat se zajmout nebo se zastřelit (tady končí příběh),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80db-be0c-c7d96f39e7e2" class="bulleted-list"><li style="list-style-type:disc">láska (Robert a prchlivá Marie),</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-8018-964f-e2234d170947" class=""><mark class="highlight-teal">Stařec a Moře</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803c-bf4b-e7bac6f23c7d" class="bulleted-list"><li style="list-style-type:disc">na Kubě, <mark class="highlight-default">autobiografické prvky </mark></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803d-9d41-fa847af71c98" class="bulleted-list"><li style="list-style-type:disc">hlavní postava je stařec (<em>Santiago</em>)</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8008-bc36-dc0d71cc70d9" class="bulleted-list"><li style="list-style-type:disc">je rybář a moc se mu nedaří a hledá pomoc od malého kluka (<em>Maloni)</em></li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8016-946f-f1eb2b42c4d3" class="bulleted-list"><li style="list-style-type:disc">Maloni nemůže a tak si řekne že popluje po moři dál než kdokoliv před ním</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-801a-a112-da4dc2dae21c" class="bulleted-list"><li style="list-style-type:disc">najde rybu větší než jeho loď a při pokusu ji chytit ho odtáhne hrozně daleko</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8086-9e37-d1983ee6fefa" class="bulleted-list"><li style="list-style-type:disc">bojuje s ní několik dní a nakonec ji uloví a táhne za sebou </li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8003-95d0-cb2c17056b0e" class="bulleted-list"><li style="list-style-type:disc">po cestě domů ho napadnou žraloci a ožerou tu rybu</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80ff-ae20-e83079d756b2" class="bulleted-list"><li style="list-style-type:disc">zpátky do městečka už dotáhne jen kostru, ale i tak dostane respekt od lidí </li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-808f-926b-eba9c35eab92" class=""><mark class="highlight-orange">Francis Scott Fitzgerald</mark></h3></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8085-b6df-cadc3265e32e" class="bulleted-list"><li style="list-style-type:disc">ovlivněn vztahem s jeho manželkou Zeldou (inspirace pro román Něžná žena), se kterou chodili často do klubů (hodně pili),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80d3-9d1f-f6b236ec8094" class="bulleted-list"><li style="list-style-type:disc">Zelda se psychicky zhroutila a zemřela,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8025-880e-f09468383d09" class="bulleted-list"><li style="list-style-type:disc">Francis se odstěhoval do Hollywoodu (jako scénárista - neúspěšně),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-809a-a552-c5bffdfc04c0" class="bulleted-list"><li style="list-style-type:disc">autor jazzového (moderního) věku,</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-8096-b1fa-f3b4530e8529" class=""><mark class="highlight-teal">Velký Gatsby</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-801f-8ce7-f8d5c77f3c91" class="bulleted-list"><li style="list-style-type:disc">ich forma - Nick vypravěč,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-809e-8f2b-ef303ec037dc" class="bulleted-list"><li style="list-style-type:disc">přestěhuje se do sousedství velkého Gatsbyho,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80bb-9a7d-dc35632c1cbd" class="bulleted-list"><li style="list-style-type:disc">Gatsby pořádá pořád večírky, sešlost smetánky,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-807c-88f7-ced778e42816" class="bulleted-list"><li style="list-style-type:disc">přes jezero bydlí (Nickova sestřenice) Daisy - Gatsbyho velká láska, ale vdaná za někoho bohatšího (ale nevěrného Toma - jeho milenka je manželka majitele benzínky),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8030-be1c-f3b2b9be20a6" class="bulleted-list"><li style="list-style-type:disc">během války Gatsby ohromně zbohatne,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-802e-ac11-e17c9c92f80c" class="bulleted-list"><li style="list-style-type:disc">Gatsby se s Daisy schází (žádá ji, aby opustila Toma),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8073-9475-c9a0e2558f39" class="bulleted-list"><li style="list-style-type:disc">Hádka mezi Tomem a Gatsbym ve městě,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-802d-a131-e6d3b1dbc06f" class="bulleted-list"><li style="list-style-type:disc">Gatsby Daisy vyzvedne žlutým autem (takovým, jako nikdo nemá), ale řídí Daisy a srazí Tomovu milenku,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80f0-bd15-c09865c28d9a" class="bulleted-list"><li style="list-style-type:disc">manžel milenky zastřelí Gatsbyho (na jeho pohřeb přijde jen Nick - pokrytectví americké společnosti),</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-800b-8628-d12d340fa1bf" class=""><mark class="highlight-teal">Podivuhodný případ Benjamina Buttona</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803c-be49-da3b025e4db7" class="bulleted-list"><li style="list-style-type:disc">krátká povídka o které je natočen 3 hodinový film</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-809d-86e9-f430a83079ee" class="bulleted-list"><li style="list-style-type:disc">Benjamin se narodí jako stařec a postupně mládne</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80a7-b25b-da12c85bdb78" class="bulleted-list"><li style="list-style-type:disc">bude mít spoustu problémů </li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8073-9553-ce8a437aa744" class="bulleted-list"><li style="list-style-type:disc">jeho syn ho dává do školy, pak do školky a pak umře</li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-80f3-b79c-c24041a53919" class=""><mark class="highlight-orange">John Steinbeck</mark></h3></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8030-9a3b-c7196f3e53cc" class="bulleted-list"><li style="list-style-type:disc">píše o krizích a chudých lidech → zemědělci, námořníci,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8020-9536-df29e2a2caa0" class="bulleted-list"><li style="list-style-type:disc">píše o svých zkušenostech (měl pestrý život),</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e4-9950-c50cdc4c461d" class="bulleted-list"><li style="list-style-type:disc">žil v Kalifornii,</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-808a-8b71-f7c579ac40c2" class=""><mark class="highlight-teal">Hrozny hněvu</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80c2-b96d-ff02965907ce" class="bulleted-list"><li style="list-style-type:disc">příběh o rodině zemědělců během SHK, během které přijdou o majetek,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803f-a61b-c47436df42e7" class="bulleted-list"><li style="list-style-type:disc">zjistí že v Kalifornii je prázdná půda, nejsou jediní,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-803f-9311-f06b075c7743" class="bulleted-list"><li style="list-style-type:disc">nenajdou už ani zaměstnání,</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-807a-a6e7-ec73de048930" class="bulleted-list"><li style="list-style-type:disc">na konci příběhu mladá žena porodí, ale bábetko zomre, nakojí starce (zoufalost)</li></ul></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-802d-8ade-dea8ba32ee69" class=""><mark class="highlight-teal">O myších a lidech</mark></p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8075-991c-dc9f41542351" class="bulleted-list"><li style="list-style-type:disc">MRDAAAAAAAAAAAAT…</li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

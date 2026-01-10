@@ -1,0 +1,725 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>3. Realismus – Francie, Anglie + znaky</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d5073c5a-a069-4313-9390-09b75faf5cb4" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🇫🇷</span></div><h1 class="page-title" dir="auto">3. Realismus – Francie, Anglie + znaky</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><ul id="e5ed1090-92ef-4e39-bed9-2f9f66f301f5" class="toggle"><li><details open=""><summary>vojta soubory</summary><div style="display:contents" dir="ltr"><figure id="27e79f1a-699b-48da-9eff-5aa37beb6a2d"><div class="source"><a href="3%20Realismus%20%E2%80%93%20Francie,%20Anglie%20+%20znaky/Fr__A.pdf">Fr__A vojta.pdf</a></div></figure></div><div style="display:contents" dir="ltr"><figure id="089d1066-b169-45c6-b6e7-a593e254f436"><div class="source"><a href="3%20Realismus%20%E2%80%93%20Francie,%20Anglie%20+%20znaky/Realismus_Anglie_Rusko_zaci_1.pdf">Realismus_Anglie_Rusko_zaci_1 vojta.pdf</a></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="e0ac96d4-8397-4090-8f60-07944177f9d0" class="toggle"><li><details open=""><summary>vasek soubory</summary><div style="display:contents" dir="auto"><p id="c314b2c2-bb6a-4cfd-b0df-0ef4d87d2bc1" class="">Fr + A</p></div><div style="display:contents" dir="ltr"><figure id="c3565d73-49a2-4857-9f88-d9b048ec91cd"><div class="source"><a href="3%20Realismus%20%E2%80%93%20Francie,%20Anglie%20+%20znaky/3._Fr__A.pdf">https://prod-files-secure.s3.us-west-2.amazonaws.com/af1a3281-f0b0-440e-bddb-e3e5e63a54de/223fee1c-7a01-4d0f-95ca-e4043e756a7d/3._Fr__A.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="cfe603ea-0e57-4463-9d5c-f4bc5ac52b4d" class="">Realismus Anglie, Rusko</p></div><div style="display:contents" dir="ltr"><figure id="e7d0d963-71c5-427e-b67a-43a7912d4d99"><div class="source"><a href="3%20Realismus%20%E2%80%93%20Francie,%20Anglie%20+%20znaky/3._4._Realismus_Anglie_Rusko_zaci_(1).pdf">https://prod-files-secure.s3.us-west-2.amazonaws.com/af1a3281-f0b0-440e-bddb-e3e5e63a54de/21817377-c5af-4949-9aeb-c0621cafbcac/3._4._Realismus_Anglie_Rusko_zaci_(1).pdf</a></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="f79cd386-291d-4fe4-870b-b9875d33ac80" class="toggle"><li><details open=""><summary>poznamky</summary><div style="display:contents" dir="auto"><p id="973d59b4-cfb4-4514-b8ce-8643f2a244bd" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="1177efd6-0471-4d86-8329-d4a2f5d77b13" class="">Znaky realismu:</h1></div><div style="display:contents" dir="auto"><p id="2ef4fe7a-c4d5-4dc7-9409-0a539785718f" class=""><mark class="highlight-yellow">realismus </mark>= skutečný</p></div><div style="display:contents" dir="auto"><ol type="1" id="38219185-da27-4e1d-a0e1-0bded79e2ddd" class="numbered-list" start="19"><li>století, rozvoj průmyslu(stavění továren, železnic), sociální nerovnost (majitel továrny mají velký vliv) realisti kritizují</li></ol></div><div style="display:contents" dir="auto"><p id="a0e75da7-0004-481e-9ff2-80298389406d" class=""><strong>pravdivost </strong>-  uvěřitelné příběhy</p></div><div style="display:contents" dir="auto"><p id="0f3cec1e-14f8-40e8-8f87-9cf64f64f11f" class="">popis prostředí</p></div><div style="display:contents" dir="auto"><p id="1b492952-817c-4e6b-b235-06fde2a2c99b" class=""><mark class="highlight-yellow">vývoj postav </mark>- velké změny během děje</p></div><div style="display:contents" dir="auto"><p id="aa1093c0-144c-4872-a3b3-2fab5296fa5a" class=""><mark class="highlight-yellow">typičnost </mark>- typický hrdina, typické prostředí, typické zápletky</p></div><div style="display:contents" dir="auto"><p id="e5ecd3eb-0ee0-4ea6-8959-1933e9103aa2" class="">žádné zvláštní rysy hl. postav</p></div><div style="display:contents" dir="auto"><p id="78f6ea57-5ed5-412f-aad3-ae8204cca8af" class="">objektivní, méně tajemnosti</p></div><div style="display:contents" dir="auto"><p id="11f31daa-aaa6-44a6-9f87-f5135ca3edbc" class=""><mark class="highlight-yellow">er-forma</mark> ⇒ autor nesplívá s postavy</p></div><div style="display:contents" dir="auto"><p id="67f0d01c-ad99-443d-9be0-88f78c3c9b19" class="">vsechno proste vic realisticke, i jazyk, včetně vulgarismů</p></div><div style="display:contents" dir="auto"><p id="4d0143e3-6f74-409e-879b-f3ea7f7bccf7" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="ccb1cf88-f95a-46d1-b51a-d3d1c5802338" class=""><mark class="highlight-purple">Francie</mark></h1></div><div style="display:contents" dir="auto"><h2 id="aa27dfe9-168b-4501-bba9-9dbcc6fb6178" class=""><mark class="highlight-yellow">Balzac</mark></h2></div><div style="display:contents" dir="auto"><p id="a404cebd-ac58-463d-8e5e-aeafd6ec1269" class="">z bohaté rodiny, pokus o podnikání, dluhy, píše pro prachy</p></div><div style="display:contents" dir="auto"><p id="9d6963d3-1aea-489f-b5ba-0c24056a6135" class="">předávkování kofeinem</p></div><div style="display:contents" dir="auto"><p id="afbc4f76-2b41-4fc1-8c93-236cac9403d1" class=""><mark class="highlight-teal">Lidská komedie</mark> - 3 romány, popis, díla různého rozsahu<div class="indented"><div style="display:contents" dir="auto"><ul id="e9ba01cf-8525-4258-a9d2-9f80cfe9f88b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">Otec Goriot </mark>- starý obchodník, majetek dá dcerám, popis jak se cítí</li></ul></div><div style="display:contents" dir="auto"><ul id="acf23b9f-c43e-4d48-a60c-b9b18c409445" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">Ztracená iluze</mark> - básník z vesnice, ve měste zjistí, že lidi chtějí jen <mark class="highlight-blue">bezcharakterní </mark>blbosti</li></ul></div><div style="display:contents" dir="auto"><ul id="4e3ea3d8-649d-4c4b-8624-8059822f1487" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">Lesk a bída kurtizán </mark>- bro prostě zamotane je to…</li></ul></div></div></p></div><div style="display:contents" dir="auto"><p id="84cd5839-6433-483b-be4b-e6f44c75e97b" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2b3664af-a9c7-45c0-91e4-4ebb0dcc38b7" class=""><mark class="highlight-yellow">Flaubert</mark></h2></div><div style="display:contents" dir="auto"><p id="6db60b85-918f-444e-82a0-9f868136ae60" class="">nepotřebuje prachy, každé dílo hodně přepracovával</p></div><div style="display:contents" dir="auto"><p id="a42d56c3-fc96-4332-af7e-76f96bd872ed" class=""><mark class="highlight-teal">Paní Bovaryová</mark> - chce bohatý život, manžel to nechápe, má 3 milence, brala prachy z rodinných financí, jsou na mizině, zabije se</p></div><div style="display:contents" dir="auto"><p id="c434e586-69dc-48a0-b88b-a9ccb6021506" class="">bovarysmus = žít v iluzích</p></div><div style="display:contents" dir="auto"><p id="52aeed2c-1524-4781-8ec0-eb6e14433c59" class="">
+</p></div><div style="display:contents" dir="auto"><p id="a0518701-cb88-4581-9077-bcad6f195d25" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="db6d05cd-c4d5-4558-90dd-48501412b5fc" class="">Naturalismus</h1></div><div style="display:contents" dir="auto"><p id="5798b04b-49d3-404f-84f1-c724c85a2253" class="">pesimismus</p></div><div style="display:contents" dir="auto"><p id="73fd3d15-887a-4be4-a071-60ef5afde6c5" class=""><strong>bídné postavy</strong></p></div><div style="display:contents" dir="auto"><p id="e37338bd-35bf-4fb9-9fd7-43555d43c648" class="">člověk určen dědičností, pudy a prostředím</p></div><div style="display:contents" dir="auto"><p id="49aa0c8c-899d-4ee4-a4f3-128539a3a260" class=""><strong>nechutnosti</strong></p></div><div style="display:contents" dir="auto"><p id="67a090d3-5da6-4dff-bbfa-905cb6cacba1" class="">intenzivnejsi realismus</p></div><div style="display:contents" dir="auto"><p id="f7df150a-64f3-4ce1-b0f2-bb8a97af8eda" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="29a1b14b-28ed-4979-a4db-79b510ecb3d3" class=""><mark class="highlight-yellow">Zola</mark></h2></div><div style="display:contents" dir="auto"><p id="6bc54c66-c0ef-403c-aaf7-0f3bea4de745" class=""><mark class="highlight-teal">Zabiják</mark> - týpkyni zemře manžel, přítel si myslí že je na hovno - pije, zemře, ona taky pije a chcípne, dcera Nana prostituce</p></div><div style="display:contents" dir="auto"><p id="0e379d97-12e1-4238-b53c-df7abb119dc3" class=""><mark class="highlight-teal"><strong>Nana</strong></mark><strong> - </strong>Z zabiják</p></div><div style="display:contents" dir="auto"><p id="379070f5-84e4-4edc-b134-927921689cc2" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="fcd87760-fcbf-4e2f-af31-dc4219f03181" class=""><mark class="highlight-yellow">Maupassant</mark></h2></div><div style="display:contents" dir="auto"><p id="a1ef8505-0847-4dbf-b747-119b27869b17" class="">realismus/nautralismus, měšťanská vrstva<div class="indented"><div style="display:contents" dir="auto"><p id="11312284-295c-4ef3-b108-39ed814c594e" class=""><mark class="highlight-teal">Kulička </mark>- válka, němci táhnou na Paříž, bohatí lidé odjíždí, mezi nimi prostitutka(kulička), zastavení důstojníkem, ostatní donutí kuličku se s ním vyspat aby je pustil dál, cítí se zneužita</p></div><div style="display:contents" dir="auto"><p id="fb47e147-9bc3-40e4-a27a-8f7d327bb8fe" class=""><mark class="highlight-teal">Miláček </mark><strong>- </strong>novinář buduje kariéru využíváním žen</p></div><div style="display:contents" dir="auto"><p id="49a376e2-1cbc-4864-b009-c38b25d26aca" class="">
+</p></div></div></p></div><div style="display:contents" dir="auto"><h1 id="42b9e8e8-4bf2-48df-9221-7b8f4c996743" class=""><mark class="highlight-purple">Anglie</mark></h1></div><div style="display:contents" dir="auto"><h2 id="711b9e5f-0890-44f9-9e18-17f0f04e4143" class=""><mark class="highlight-yellow">Dickens</mark></h2></div><div style="display:contents" dir="auto"><p id="f789ec5e-18a0-408e-8bbb-cc4d7be99639" class="">- nešťastné dětství, rodina zadlužená, díla o nešťastných dětech<div class="indented"><div style="display:contents" dir="auto"><p id="d8705a5b-daf6-48f8-a008-dc047c996857" class=""><mark class="highlight-teal">Oliwer Twist</mark><strong> -</strong> sirotek, sirotčinec nedává prachy ani na jídlo, krade, zachrání ho vzdálení příbuzní adopcí</p></div><div style="display:contents" dir="auto"><p id="24033888-8edc-493d-9018-c1c725977db5" class=""><mark class="highlight-teal">Copperfield</mark><mark class="highlight-default"> - </mark>zkušenosti z života - není to životopis</p></div><div style="display:contents" dir="auto"><p id="0f78540e-1e71-4a20-aa4f-f477dd4dd954" class=""><mark class="highlight-teal">Nadějné vyhlídky</mark> - Pip sirotek, zachráněn trestancem, když to zjistí, tak ho ghostne; side story - chodí za starou borkou, co ji opustil snoubenec, má depky a zůstala zavřená v domě v šatech, chcípne kvůli spadlému svícnu</p></div><div style="display:contents" dir="auto"><p id="5a7d3ab2-99b7-4a97-9677-edbf35ebc45b" class=""><mark class="highlight-teal">Kronika Pickwickova klubu</mark> - satira, kritika anglické společnosti, pánský klub, “cestovní příhody”</p></div></div></p></div><div style="display:contents" dir="auto"><p id="3a252f5b-2248-4db7-ae82-c8d9e9b70318" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="b716ba18-f6a7-40b4-b3fd-e40048af0e73" class=""><mark class="highlight-yellow">Bronteövy</mark></h2></div><div style="display:contents" dir="auto"><p id="f6d77614-a3b8-4354-a902-c8c5fece4bdf" class="">- citovost, sestry, v dílech silné ženy</p></div><div style="display:contents" dir="auto"><p id="d9dd1591-d348-4564-89f8-5322dfcadbba" class=""><mark class="highlight-teal">Na větrné hůrce</mark> <mark class="highlight-yellow">(Emily)</mark> - stepbro, starší bratr je na ně zlý</p></div><div style="display:contents" dir="auto"><blockquote id="11d1fb97-f680-48b9-b062-c5ee48b7edaa" class="">Hlavním motivem knihy je bezesporu láska mezi Kateřinou a Heathcliffem. Je<br/>ovšem jen těžké se rozhodnout, zda autorka chtěla, aby čtenář hlavní dvě postavy<br/>přijal jako romantické hrdiny, jejichž láska překonává společenské zábrany a<br/>konvenční morálku anebo jestli je má čtenář odsoudit jako lidi, kteří si vzájemně i<br/>ostatním svojí nezřízenou vášní zničí život. Toto je rys, který (nejen) ve své době<br/>čtenáře značně znepokojoval a způsobil, že dílo nebylo ještě dlouho po svém<br/>vzniku uznáváno</blockquote></div><div style="display:contents" dir="auto"><p id="9db2a736-1698-4ae9-8359-81eb59e19b32" class=""><mark class="highlight-teal">Jana Eyerová </mark><mark class="highlight-yellow">(Chartlotte)</mark><mark class="highlight-teal"><strong> </strong></mark>- sirotek, chce být učitelka, stane se pečotavelkou v rodině bez ženy, vezme se s tím týpkem, na svatbě se zjistí, že týpek je ženatý a jeho žena je šílená, Jana ho opustí, když se vrátí zjistí, že týpkyně zapálila dům, týpek slepej, přesto se však vezmou</p></div><div style="display:contents" dir="auto"><h2 id="cbdac736-3bcc-4cfa-9df2-777a40b5eb47" class=""><mark class="highlight-yellow">Stevenson </mark></h2></div><div style="display:contents" dir="auto"><p id="eedfa896-f879-4387-a360-4e2b3f311c4b" class="">- cestopisy</p></div><div style="display:contents" dir="auto"><p id="0e6cfa93-f77f-43cc-83d4-6068014882a6" class=""><mark class="highlight-teal">Ostrov pokladů</mark><mark class="highlight-default"> - typek hleda poklad, ukaze se ze jeden z clenu posadky ten poklad ve skutecnosti ukryl</mark></p></div><div style="display:contents" dir="auto"><p id="626e0b1f-f484-4cc5-950c-84f8964cf7d5" class=""><mark class="highlight-teal">Podivný případ doktora Jekylla a pana Hyda </mark><mark class="highlight-default">- rozdvojena osobnost, sebevrazda</mark></p></div></details></li></ul></div><div style="display:contents" dir="auto"><p id="bb56974d-9927-4118-92ed-d4e65d341398" class="">
+</p></div><div style="display:contents" dir="auto"><p id="6b1af136-40bc-4304-baba-a9eb902a7672" class="">
+</p></div><div style="display:contents" dir="auto"><p id="6da3654a-dcee-4282-966d-bf9451d43a3a" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="51a8389d-414e-4cc3-a21e-90eee4a9da14" class="link-to-page"><a href="3%20Realismus%20%E2%80%93%20Francie,%20Anglie%20+%20znaky/Untitled%2051a8389d414e4cc3a21e90eee4a9da14.html">Untitled</a></figure></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">nesplívá </mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">V</span></span><span><b>Václav Štolba</b> <time style="font-size:0.8em">Jun 1, 2024, 8:35 PM</time></span></span></div><div style="padding:0.2em">nesplývá s měkkým i, krásně charakterizuje naši připravenost na zkoušky</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>

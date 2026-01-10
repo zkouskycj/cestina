@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>cestina</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d3098504-4d11-41cc-aec2-3c9322ebccb0" class="page sans"><header><img class="page-cover-image" src="cestina/smirkova.jpg_576x432.jpg" style="object-position:center 6.159999999999998%"/><div style="display:flex;justify-content:space-between;align-items:baseline"><h1 class="page-title" dir="auto">Czech</h1><button style="background:none;border-width: 1px;border-color: rgba(55, 53, 47, 0.6);color:rgba(55, 53, 47, 0.6);font-size:1rem;cursor:pointer;" onclick="location.href='../index.html'">Zpět</button></div><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h3 id="1514d28a-88ad-40a7-9068-eda1e10e5544" class="">otazky</h3></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-80a9-939f-e3359f2eadb3" class="link-to-page"><a href="cestina/1%20Bu%C5%99i%C4%8Di%20a%20anarchist%C3%A9%20v%20%C4%8Desk%C3%A9%20literatu%C5%99e%20p%C5%99elomu%201%20204a9ca5ff1e80a9939fe3359f2eadb3.html"><span class="icon">🗯️</span>1. Buřiči a anarchisté v české literatuře přelomu 19. a 20. století (F. Šrámek, S. K. Neumann, P. Bezruč) </a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-8010-87fc-de5de4ba52ad" class="link-to-page"><a href="cestina/2%20Sv%C4%9Btov%C3%A1%20meziv%C3%A1le%C4%8Dn%C3%A1%20literatura%20-%20futurismus,%20kub%20204a9ca5ff1e801087fcde5de4ba52ad.html"><span class="icon">🉐</span>2. Světová meziválečná literatura - futurismus, kubismus, kubofuturismus</a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-806e-b381-eb9c54153d4f" class="link-to-page"><a href="cestina/3%20Sv%C4%9Btov%C3%A1%20meziv%C3%A1le%C4%8Dn%C3%A1%20literatura%20-%20surrealismus,%20d%20204a9ca5ff1e806eb381eb9c54153d4f.html"><span class="icon">🌀</span>3. Světová meziválečná literatura - surrealismus, dadaismus  </a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-80aa-a748-c89684098ade" class="link-to-page"><a href="cestina/4%20Sv%C4%9Btov%C3%A1%20pr%C3%B3za%20v%201%20polovin%C4%9B%2020%20stolet%C3%AD%20(Francie%20+%20204a9ca5ff1e80aaa748c89684098ade.html"><span class="icon">🇫🇷</span>4. Světová próza v 1. polovině 20. století (Francie + Německo)</a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-80ec-975a-e3e3726b9f3f" class="link-to-page"><a href="cestina/5%20Sv%C4%9Btov%C3%A1%20pr%C3%B3za%20v%201%20polovin%C4%9B%2020%20stolet%C3%AD%20(Anglie%20+%20%20204a9ca5ff1e80ec975ae3e3726b9f3f.html"><span class="icon">🇺🇸</span>5. Světová próza v 1. polovině 20. století (Anglie + USA) </a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-801e-8c06-d00ca3dcc3a2" class="link-to-page"><a href="cestina/6%20Sv%C4%9Btov%C3%A1%20pr%C3%B3za%20v%201%20polovin%C4%9B%2020%20stolet%C3%AD%20(Pra%C5%BEsk%C3%A1%20n%20204a9ca5ff1e801e8c06d00ca3dcc3a2.html"><img class="icon notion-static-icon" src="https://www.notion.so/icons/judicial-scales_gray.svg"/>6. Světová próza v 1. polovině 20. století (Pražská německá literatura) </a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-8094-b58e-f5b36d021e32" class="link-to-page"><a href="cestina/7%20Mluvnice%20%E2%80%93%20ohebn%C3%A9%20a%20neohebn%C3%A9%20slovn%C3%AD%20druhy%20204a9ca5ff1e8094b58ef5b36d021e32.html"><span class="icon">😤</span>7. Mluvnice – ohebné a neohebné slovní druhy </a></figure></div><div style="display:contents" dir="ltr"><figure id="204a9ca5-ff1e-8163-8139-f5e011621966" class="link-to-page"><a href="cestina/8%20B%C3%A1snick%C3%A9%20vyjad%C5%99ovac%C3%AD%20prost%C5%99edky%20204a9ca5ff1e81638139f5e011621966.html"><span class="icon">💬</span>8. Básnické vyjadřovací prostředky</a></figure></div><div style="display:contents" dir="auto"><p id="204a9ca5-ff1e-806c-ae98-dd2b39409700" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-807c-b716-fc27ce3cb0e6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">povídka </mark>- krátky časový úsek, málo postav, 1 dějová linie (srovnatelné k filmu)</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8020-9d87-cd02ebaa38fa" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">román</mark> - epika, bohatý děj, dlouhý časový úsek, často proměna hlavních postav, vztahy, próza (srovnatelné k dlouhému seriálu s souvislým dějem)</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8016-bb5a-c9d95c7ec127" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">novela </mark>- povídka ale s pointou</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80e6-a7e1-ea8c2d2d66e5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">pointa </mark>- hlavní myšlenka, v níž vrcholí (nečekaný) závěr projevu</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-8060-aec5-dcc0bcf5b336" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">apostrofa</mark> - oslovení nepřítomného nebo neživého, něco co nemůže odpovědět</li></ul></div><div style="display:contents" dir="auto"><ul id="204a9ca5-ff1e-80cd-b5c1-c5b763220a37" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">fonetika </mark>- cast jazykovedy co se zabyva vyslovností, obor jazykovědy</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-807b-ae1c-f6d6c6d1c173" class=""><mark class="highlight-red">Buřiči a anarchisté</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80d7-838c-d12d54128bde" class=""><mark class="highlight-orange">Fráňa Šrámek</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806e-bdae-fda16ac4d13f" class="bulleted-list"><li style="list-style-type:disc">Modrý a rudý</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-804f-bf40-c3674a547522" class="bulleted-list"><li style="list-style-type:disc">Splav</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80a8-838a-f5fbb3422f9a" class="bulleted-list"><li style="list-style-type:disc">Stříbrný vítr</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802e-acd9-d93cf31fdada" class="bulleted-list"><li style="list-style-type:disc">Měsíc nad řekou</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80b0-a76b-f400b85d891f" class=""><mark class="highlight-orange">Petr Bezruč</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d3-9482-e8dcf7eeb05c" class="bulleted-list"><li style="list-style-type:disc">Slezské písně<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-804a-9e9c-cd9d22fd55a0" class="bulleted-list"><li style="list-style-type:circle">Červený Květ</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8031-ace0-c653b3efb262" class="bulleted-list"><li style="list-style-type:circle">Maryčka Magdonová</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800d-9a9e-c6284d445b10" class="bulleted-list"><li style="list-style-type:circle">Kantor Halfar</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ce-92a0-e6d874a9225b" class="bulleted-list"><li style="list-style-type:circle">Ostrava</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-804a-b1e4-ebe73ba49a10" class="bulleted-list"><li style="list-style-type:circle">Stužkonožka modrá</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-807a-94ea-dd5a108c7ee2" class=""><mark class="highlight-orange">Sanislav Kostka Neumann</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8009-b9cb-e943baa5e018" class="bulleted-list"><li style="list-style-type:disc">Satanova sláva mezi námi</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-807c-8846-c0d8fac8de6a" class="bulleted-list"><li style="list-style-type:disc">Apostrofy hrdé a vášnivé</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80fa-8d39-d29656d84601" class="bulleted-list"><li style="list-style-type:disc">Kniha lesů, vod a strání</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8011-959c-c2899e3146f4" class="bulleted-list"><li style="list-style-type:disc">Nové zpěvy</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8002-9cde-db52d032b424" class="bulleted-list"><li style="list-style-type:disc">Rudé zpěvy</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-8047-924e-d0d09f84c2a6" class=""><mark class="highlight-red">Futurismus</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80b0-88c5-d7ce37d9db94" class=""><mark class="highlight-orange">Filipo Marineti</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8017-bd03-e86ee7042e49" class="bulleted-list"><li style="list-style-type:disc">Osvobozená slova</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8099-a2be-c118a29908f6" class=""><mark class="highlight-orange">Velemir Chlebnikov</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8050-aa30-f6e30057aeb1" class="bulleted-list"><li style="list-style-type:disc">(palindrom)</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-8005-9980-cbb389d55e6f" class=""><mark class="highlight-red">Kubismus</mark></h2></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-805b-a2bc-dfeb06985c2a" class="">(Picasso)</p></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-802e-a333-d207fdad76f7" class=""><mark class="highlight-red">Kubofuturismus</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8033-8884-e0db0194be7b" class=""><mark class="highlight-orange">Apollinaire</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8008-8d2b-cc7f52c6194d" class="bulleted-list"><li style="list-style-type:disc">Alkoholy</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802c-8a25-da775ef5ba1f" class="bulleted-list"><li style="list-style-type:disc">Pásmo</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80af-b41d-defca2da312a" class="bulleted-list"><li style="list-style-type:disc">Kaligramy</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-8081-951e-fe326156124c" class=""><mark class="highlight-red">Dadaismus</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8033-9dff-f41696704045" class=""><mark class="highlight-orange">Tristan Tzara</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8087-8479-ea556099fad6" class="bulleted-list"><li style="list-style-type:disc">manifest dadaismu</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8063-9b52-c31629892e7d" class=""><mark class="highlight-orange">Christian Morgenstern</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8079-a4b3-e37e64145d9d" class="bulleted-list"><li style="list-style-type:disc">nonsensová poezie v Německo, Šibeniční písně<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e0-8a49-c75288d1cc40" class="bulleted-list"><li style="list-style-type:circle">(veliké lalulá, Noční rybí zpěv, Trychtýře)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80bb-ac62-dfce52dcf8b6" class=""><mark class="highlight-red">Surrealismus</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8020-9f29-e48b2554508f" class=""><mark class="highlight-orange">Salvador Dalli</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8061-a7b6-de574cc20f17" class="bulleted-list"><li style="list-style-type:disc">“automatické texty”</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80d2-961b-d5f6fde716c9" class=""><mark class="highlight-red">Francie</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8040-a9ad-d68633575d0a" class=""><mark class="highlight-orange">Romain Rolland</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8079-8671-f825a0684284" class="bulleted-list"><li style="list-style-type:disc">Petr &amp; Lucie</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-802e-923c-df3f81cf9654" class=""><mark class="highlight-orange">Antoine de Saint-Exupéry</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8000-be5c-e383c309d1c3" class="bulleted-list"><li style="list-style-type:disc">Malý princ</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80bb-8e3f-ec7e67cd2d12" class=""><mark class="highlight-red">Německo</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80a9-952a-d25f09ff1fbc" class=""><mark class="highlight-orange">Thomas Mann</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806f-9cfd-db46fcb1ba43" class="bulleted-list"><li style="list-style-type:disc">Buddenbrookovi</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80cb-94b4-f6921550c5ec" class="bulleted-list"><li style="list-style-type:disc">Josef a bratři jeho</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80b7-b5b0-e9d64b7fa038" class="bulleted-list"><li style="list-style-type:disc">Doktor Faustus</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8001-bcd9-eeff4df2800f" class=""><mark class="highlight-orange">Heinrich Mann</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ac-b2be-e3b23453bd80" class="bulleted-list"><li style="list-style-type:disc">Profesor Neřád</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8065-a47c-e28800ebf992" class=""><mark class="highlight-orange">Erich Maria Remarque</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f3-8903-d0d11467ecb4" class="bulleted-list"><li style="list-style-type:disc">Na západní frontě klid</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80cc-ae55-c8da34ac63f8" class="bulleted-list"><li style="list-style-type:disc">Cesta zpátky</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8084-a261-c3019cf888f1" class="bulleted-list"><li style="list-style-type:disc">Nebe nezná vyvolených</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80a8-b4ad-f3c023ec6376" class=""><mark class="highlight-red">Anglie</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8091-baef-ed0f5e2fa281" class=""><mark class="highlight-orange">James Joyce</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802b-99eb-f39a479efa23" class="bulleted-list"><li style="list-style-type:disc">Odysseus (Ulysses)</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80bc-8932-ed9fa69edc7d" class=""><mark class="highlight-orange">George Bernard Shaw</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-805f-935c-c3bff9475213" class="bulleted-list"><li style="list-style-type:disc">Pygmalion</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8015-bd59-e27854b03c76" class="bulleted-list"><li style="list-style-type:disc">“inteligenti vi ze nevi”</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80e3-bb96-f8e033fad736" class=""><mark class="highlight-red">USA</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80ff-a852-d6024aa45525" class=""><mark class="highlight-orange">Ernest Hemingway</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802e-b9ca-fb53843ce83c" class="bulleted-list"><li style="list-style-type:disc">Sbohem armádo</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8083-86f3-d59236dc985c" class="bulleted-list"><li style="list-style-type:disc">Komu zvoní hrana</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8049-9b78-e570a2dc2deb" class="bulleted-list"><li style="list-style-type:disc">Stařec a moŕe</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80b3-a8d6-e0a1ad2aade6" class=""><mark class="highlight-orange">Francis Scott Fitzgerald</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8095-8b64-ebed6bdb786f" class="bulleted-list"><li style="list-style-type:disc">Velký Gatsby</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8023-9209-f5cbbee61075" class="bulleted-list"><li style="list-style-type:disc">Podivuhodný případ Benjamina Buttona</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8092-bc85-c666d4f89c20" class=""><mark class="highlight-orange">John Steinbeck</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8098-92b8-db80b94f8b92" class="bulleted-list"><li style="list-style-type:disc">Hrozny hněvů</li></ul></div><div style="display:contents" dir="auto"><h2 id="205a9ca5-ff1e-80ac-9500-f0dbab71cdd4" class=""><mark class="highlight-red">Pražská německá literatura</mark></h2></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8087-b98d-dd6b4c8c123b" class=""><mark class="highlight-orange">Franz Kafka</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8025-98b6-e4fbb691a2d0" class="bulleted-list"><li style="list-style-type:disc">Proměna</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8007-990d-c3513d3ca713" class="bulleted-list"><li style="list-style-type:disc">Proces</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8039-886a-e0920152f4ec" class="bulleted-list"><li style="list-style-type:disc">Zámek</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8023-a793-d19655b68dc3" class="bulleted-list"><li style="list-style-type:disc">Nezvěstný</li></ul></div><div style="display:contents" dir="auto"><p id="20fa9ca5-ff1e-8052-b4b0-dde9cad22e2e" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

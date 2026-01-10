@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>7. Mluvnice – ohebné a neohebné slovní druhy </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="204a9ca5-ff1e-8094-b58e-f5b36d021e32" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">😤</span></div><h1 class="page-title" dir="auto">7. Mluvnice – ohebné a neohebné slovní druhy </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="204a9ca5-ff1e-8031-94aa-f9e1ee16ed94" class=""><mark class="highlight-red">Ohebná</mark></h2></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-8042-9416-cb76fe776b5b" class="">latinsky terminy</p></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8056-80be-d620feb297ee" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">pády</span><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8095-8739-f31bd27ecf41" class="numbered-list" start="1"><li>nominativ (Kdo? Co?)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80c9-8c15-f44a872d55d6" class="numbered-list" start="2"><li>genitiv (Koho? Čeho?)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80b7-99e8-ede437879dd5" class="numbered-list" start="3"><li>dativ (Komu? Čemu?)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80d5-b24d-d171f338d900" class="numbered-list" start="4"><li>akuzativ (Koho? Co?)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80bb-a444-ddce4c1ef9d5" class="numbered-list" start="5"><li>vokativ (Oslovujeme, voláme…)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80d6-977d-da1a43f84c32" class="numbered-list" start="6"><li>lokál (Kom? Čem?)</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8027-8d2c-f21235d6ba39" class="numbered-list" start="7"><li>instrumentál (Kým? Čím?)</li></ol></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8017-a4b0-fc91b3f75b31" class=""><mark class="highlight-orange">Podstatná jména</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-804c-8aa7-f361c808710b" class="bulleted-list"><li style="list-style-type:disc">substantiva</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8091-9c36-e826e1f959e8" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">mluvnické kategorie</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806a-b883-c798de845b87" class="bulleted-list"><li style="list-style-type:circle">pád (1 - 7)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8036-bf3c-dcf30c59dcb1" class="bulleted-list"><li style="list-style-type:circle">číslo (jednotné, množné)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8065-816b-c5f14cf9acdf" class="bulleted-list"><li style="list-style-type:circle">rod (mužský, ženský, střední)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8068-afbd-fdc9e57a7f9d" class="bulleted-list"><li style="list-style-type:circle">(vzor)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-808f-8b3c-db13af0027f6" class="bulleted-list"><li style="list-style-type:disc">životnost - neživotnost jen u jmen mužských</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f2-adc6-f594bdaaa008" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">generické maskulinum </mark>= maskulinum pro označení mužů i žen (žáci, host)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80b2-b5bf-d01467660bf5" class="bulleted-list"><li style="list-style-type:disc">biologická životnost x mluvnická neživotnost</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d7-977e-d1b766fe8032" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">duál (dvojné číslo) </mark>=  ve staročeštině označoval lidi a věci v páru - zbytky dodnes (oči, uši, prsa)<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-807b-a493-c9897eb1d947" class="bulleted-list"><li style="list-style-type:circle">v 7. pádě se dává -ma (ruka<span style="border-bottom:0.05em solid">ma</span>, ne ruka<span style="border-bottom:0.05em solid">mi</span>), v 2. a 6. -ou (bez ruk<span style="border-bottom:0.05em solid">ou</span>)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-805b-afb5-fce23828fcac" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">jména</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8096-a84d-e392637c253c" class="bulleted-list"><li style="list-style-type:circle">pomnožná = tvar množného čísla, ale označují 1 osobu, věc ( TA ústa, TY kalhoty, kamna)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-805e-be51-ffb9e6b8c457" class="bulleted-list"><li style="list-style-type:circle">hromadná = tvar jednotného čísla, ale označují větší počet předmětů chápaných jako celek a téhož druhu ( TO uhlí, TO stromoví, vojsko, bratrstvo)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8098-82d4-e4400086153b" class="bulleted-list"><li style="list-style-type:circle">látková = označují tvarem jednotného čísla věci, jejichž části jsou shodné s celkem (písek, mák, hrách, žito)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8056-888f-f1afe070c274" class=""><mark class="highlight-orange">Přídavná jména</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8041-b92e-d29a2a8fd954" class="bulleted-list"><li style="list-style-type:disc">adjektiva</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8077-b972-dcfe5c8ed59f" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">mluvnické kategorie:</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80b9-841e-cf6a8323ebe4" class="bulleted-list"><li style="list-style-type:circle">pád (1 - 7),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8003-ad83-f71db8a9973b" class="bulleted-list"><li style="list-style-type:circle">číslo (jednotné, množné),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8031-bb6a-e38c02e977d2" class="bulleted-list"><li style="list-style-type:circle">rod (mužský, ženský, střední - závislé na substantivech!),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f1-ba81-d88718db2c1e" class="bulleted-list"><li style="list-style-type:circle">druh (tvrdé, měkké, přivlastňovací),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800a-af71-f19dd00f0e75" class="bulleted-list"><li style="list-style-type:circle">vzor (mladý, jarní, otcův/matčin),</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8069-8312-eed803f55caf" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Jmenné (krátké) tvary adjektiv (spíše knižní)</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800b-883b-fcefa2a15613" class="bulleted-list"><li style="list-style-type:circle">zdráv (jsem zdravý), šťasten (jsem šťastný), rád</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800e-b9ff-f719fe3f2bc5" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Stupňování:</span></li></ul></div><div style="display:contents" dir="auto"><ol type="a" id="205a9ca5-ff1e-8086-a06b-feeafcec29f4" class="numbered-list" start="1"><li>Pravidelné<div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-8008-b007-df0b78b11bf7" class="">1. stupeň = pozitiv → malý</p></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-809a-b90f-fd61abfe9896" class="">2. stupeň = komparativ → menší</p></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-806a-9208-dba47f8f4b63" class="">3. stupeň = superlativ → nejmenší</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="205a9ca5-ff1e-8031-a4fd-c56d8be9dc45" class="numbered-list" start="2"><li>Nepravidelné<div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-802f-91cb-d70a5d50f0e0" class="">1. stupeň → dobrý</p></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-8084-9ef4-c3cf84c82ce9" class="">2. stupeň → lepší</p></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-8095-9883-eac0d370f3e7" class="">3. stupeň → nejlepší</p></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-80d0-83cd-f1191fceb111" class="">(špatný, zlý)</p></div></li></ol></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8002-9db8-c5e4c4f06b20" class=""><mark class="highlight-orange">Zájmena</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d9-a8f1-db84a5729bdf" class="bulleted-list"><li style="list-style-type:disc">pronomina</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80a0-83dd-f7a2b36f1d87" class="bulleted-list"><li style="list-style-type:disc">zaskakují za jména</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806b-bc60-c0c01a79608e" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">mluvnické kategorie:</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8034-97df-cc67f805c758" class="bulleted-list"><li style="list-style-type:circle">pád (1 - 7),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8091-a174-c01c5bb0dae8" class="bulleted-list"><li style="list-style-type:circle">číslo (jednotné, množné),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e9-b78e-e05abf5501ee" class="bulleted-list"><li style="list-style-type:circle">rod (mužský, ženský, střední),</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8025-9ceb-c36958369693" class="bulleted-list"><li style="list-style-type:circle">druh,</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8046-a7a4-dbf8df91cd3e" class="bulleted-list"><li style="list-style-type:disc">rodová (ona) x bezrodová (ty)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8095-9aba-e07b3b1d185b" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Druhy zájmen podle funkce/významu:</span><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8065-85cb-cf0ea4ce1fe7" class="numbered-list" start="1"><li>osobní - zastupují jména<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8060-9f60-e4db1df06366" class="bulleted-list"><li style="list-style-type:disc">já, ty, on, ona, ono, my, vy, oni, ony, ona, zvratné se/si,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80e8-92b5-e95e99156191" class="numbered-list" start="2"><li>přivlastňovací - určují, že někomu něco patří<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ad-9395-d7f24a25ba7e" class="bulleted-list"><li style="list-style-type:disc">můj, tvůj, náš, váš, jeho, její, jejich, svůj,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80b3-8a32-f26090e74f4d" class="numbered-list" start="3"><li>ukazovací - označení nebo ukázání na něco (ale né zastoupení)<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80df-aee6-e9889164a7b9" class="bulleted-list"><li style="list-style-type:disc">ten, ta, to, ti, ty, ta, tento, tenhle, onen, takový, týž, tentýž, sám,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8052-9318-c80609721be1" class="numbered-list" start="4"><li>tázací - otázka pro zjištění informace<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80c8-862b-e9db65b60917" class="bulleted-list"><li style="list-style-type:disc">kdo, co, jaký, který, čí,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80cc-a783-d06558477348" class="numbered-list" start="5"><li>vztažná - připojují věty; “ten, x” (ten, kdo to udělal; to, co se stalo; ti, již/kteří pracují)<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8078-a4e3-cb1548967029" class="bulleted-list"><li style="list-style-type:disc">kdo, co, jaký, který, čí, jenž,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-800e-bbed-c4a2581d851f" class="numbered-list" start="6"><li>neurčitá - neurčitost prostě<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e6-84b4-e6190dba7b0d" class="bulleted-list"><li style="list-style-type:disc">někdo, něco, některý, nějaký, něčí, leckdo, lecco, leckterý, lecjaký, lecčí, ledakdo, ledaco, ledakterý, ledajaký, ledačí,</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8080-b854-c7ba090841fa" class="numbered-list" start="7"><li>záporná - popírání, zápor<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-805d-96db-ec33f1c462ed" class="bulleted-list"><li style="list-style-type:disc">nikdo, nic, nijaký, ničí, žádný,</li></ul></div></li></ol></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-80f1-a54e-decb7cfb2da9" class=""><mark class="highlight-orange">Číslovky</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806f-9d96-e3a01eb476c0" class="bulleted-list"><li style="list-style-type:disc">numeralia</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8007-b04f-dc2780e1632a" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">druhy zájmen podle určitosti </span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d9-a250-cebb3ca39296" class="bulleted-list"><li style="list-style-type:circle">určité - přesná kvantita (sedmý, nulový)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8058-8bba-ff7e162564bc" class="bulleted-list"><li style="list-style-type:circle">neurčité - neurčité (několikátý)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ef-8e3f-c83598b7f87f" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">druhy zájmen podle významu</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8027-8a5b-f8ca0f8662eb" class="bulleted-list"><li style="list-style-type:circle">základní - jeden, dva, sedmnáct</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80cf-8963-d1ca695e062f" class="bulleted-list"><li style="list-style-type:circle">řadové - první, druhý, sedmnáctý</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f3-b546-df83a163d4fc" class="bulleted-list"><li style="list-style-type:circle">druhové - dvojí, dvoje, sedmnáctero</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f6-8035-fb3c8ba98636" class="bulleted-list"><li style="list-style-type:circle">násobné - jedenkrát, dvakrát, sedmnáctkrát</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ae-9b3d-f3b53d4a0bc3" class="bulleted-list"><li style="list-style-type:circle">+ další druhy (skupinové, dílové, souborové)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e5-93c0-d3d21a38a085" class="bulleted-list"><li style="list-style-type:disc">zas ten zkurvenej <span style="border-bottom:0.05em solid">duál</span> - oběma, dvěma</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8022-ab49-e6ddb980e6e8" class="bulleted-list"><li style="list-style-type:disc">píší s odděleně, leda že by byl slovosled převrácený (třiadvacet)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e7-bdb9-eb750cf53a3d" class="bulleted-list"><li style="list-style-type:disc">pokud jsou spojena se slovem:<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d5-a9e3-c1df32931db6" class="bulleted-list"><li style="list-style-type:circle">s přídavným se píšou dohromady - 40denní, 12% jako <em>dvanáctiprocentní</em></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80da-aea9-db24279c4b77" class="bulleted-list"><li style="list-style-type:circle">s podstatným odděleně - 40 dnů, 12 % jako <em>dvanáct procent</em></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-808a-a9d6-c7fc277bdbbc" class=""><mark class="highlight-orange">Slovesa</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f9-a668-c8ac1e45b614" class="bulleted-list"><li style="list-style-type:disc">verba</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80aa-b2b7-e58c139cbd95" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">mluvnické kategorie </span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80c2-9807-dc9631ca2021" class="bulleted-list"><li style="list-style-type:circle">osoba (první, druhá, třetí)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ed-a159-f3923b4155e9" class="bulleted-list"><li style="list-style-type:circle">číslo (jednotné, množné)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80cd-a7f0-ec97e1c3b894" class="bulleted-list"><li style="list-style-type:circle">způsob (oznamovací, podmiňovací, rozkazovací)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802c-a80e-daec1a97c20c" class="bulleted-list"><li style="list-style-type:circle">čas (minulý, přítomný, budoucí)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80fd-8cf1-eb6f87bf0dd1" class="bulleted-list"><li style="list-style-type:circle">rod (činný, trpný)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800b-a769-ddd74201fd37" class="bulleted-list"><li style="list-style-type:circle">vid (dokonavý, nedokonavý)<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8012-bf67-c17fb5ac33bb" class="bulleted-list"><li style="list-style-type:square">dokonavý - časově ohraničený děj, jednorázový děj, určitá věc se stane nebo stalo (padnout, přečíst→ bude padnout, bude přečte)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8013-ad5e-f584753667f7" class="bulleted-list"><li style="list-style-type:square">nedokonavý - časově neohraničený děj, něco co může trvat, není ukončené (padat, číst→ bude padat, bude číst)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8087-ba92-f564f91d8a69" class="bulleted-list"><li style="list-style-type:square"><mark class="highlight-blue">obouvidovost - </mark><mark class="highlight-default">vykazují oba vidy (absolvovat, věnovat)</mark><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ab-8080-f0ab3bc2541c" class="bulleted-list"><li style="list-style-type:disc">“V roce 2020 absolvoval vysokou školu.” (dokonavý)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8068-b6f4-c03031d5fd66" class="bulleted-list"><li style="list-style-type:disc">“Absolvuje kurzy tance.” (ned)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8042-a3ed-d2b8f88a18a1" class="bulleted-list"><li style="list-style-type:square"><mark class="highlight-blue">vidové dvojice - </mark><mark class="highlight-default">dvě slovesa, které mají týž význam, ale liší se videm (opravit - opravovat, připravit - připravovat)</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806e-b4c4-d53d72a31a13" class="bulleted-list"><li style="list-style-type:circle">+ třída, vzor<div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80a1-a659-d1c90e119940" class="numbered-list" start="1"><li>e</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8027-82bd-ff8efb66d1d5" class="numbered-list" start="2"><li>ne</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-80b1-a92f-e4d5443b82be" class="numbered-list" start="3"><li>je</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8018-b59e-d512ffec1013" class="numbered-list" start="4"><li>í</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="205a9ca5-ff1e-8052-afcc-ff1f8ce7466b" class="numbered-list" start="5"><li>á</li></ol></div></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8057-a8a5-cc51ba7f78cd" class="bulleted-list"><li style="list-style-type:disc">druh sloves podle významu<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80f1-ad2c-c44373a45fc7" class="bulleted-list"><li style="list-style-type:circle">plnovýznamová - mají samostatný věcný význam (radovat se, běhat)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8007-a8f8-e5040f40fefc" class="bulleted-list"><li style="list-style-type:circle">neplnovýznamová - jejich význam je oslaben, spojují se s něčím <div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8093-8f0a-fb1356cbe643" class="bulleted-list"><li style="list-style-type:square">pomocná - sloveso být (přišel jsem, budu tančit)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80eb-a669-c852645e7373" class="bulleted-list"><li style="list-style-type:square">modální - pojí se s infinitivem. chtít, mít, moci, muset, smět (chce cestovat)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-808e-aa25-f4cacffa5bcf" class="bulleted-list"><li style="list-style-type:square">fázová slovesa - pojí se s infinitivem. začít, začínat, přestat (začíná křičet)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8061-ab1e-f76b1220be5f" class="bulleted-list"><li style="list-style-type:square">sponová slovesa - být, bývat, stát se, stávat se (je ukňučený, stala se novinářkou)</li></ul></div></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-804b-97da-fe121db8e06d" class="bulleted-list"><li style="list-style-type:disc">skladební hledisko<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8031-b848-cbfda5b72904" class="bulleted-list"><li style="list-style-type:circle">předmětová - vyžadují doplnění předmětem (nést, darovat)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80fd-b2cb-f76e5aef34c7" class="bulleted-list"><li style="list-style-type:circle">bezpředmětová - (spát, jíst, stárnout)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8020-a7d7-ce0a6c523575" class="bulleted-list"><li style="list-style-type:disc"> <mark class="highlight-blue">reflexivum tantum </mark><mark class="highlight-default">= slovesa existující pouze ve zvratná podobě (smát se)</mark></li></ul></div><div style="display:contents" dir="auto"><h2 id="204a9ca5-ff1e-80ac-99f5-d27af0b1c88e" class=""><mark class="highlight-red">Neohebná</mark></h2></div><div style="display:contents" dir="auto"><h3 id="204a9ca5-ff1e-8089-909a-ea0d22de86c4" class=""><mark class="highlight-orange">Příslovce</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ba-88f5-e966f1f1e925" class="bulleted-list"><li style="list-style-type:disc">adverbia,</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-808c-8c6f-cba9b383a700" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Dělení podle významu:</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-805d-b0b8-f306b4c59841" class="bulleted-list"><li style="list-style-type:circle">místo - kde? (tady, doma…)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80bb-9f06-c5fca8f32a43" class="bulleted-list"><li style="list-style-type:circle">čas - kdy? (hned, dnes, zítra…)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8022-a2d6-f4d9a9f88ac8" class="bulleted-list"><li style="list-style-type:circle">způsob - jak? (vesele, krásně…)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8015-9a3b-c609521b0161" class="bulleted-list"><li style="list-style-type:circle">příčina (proč, proto, úmyslně, schválně, navzdory)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80fc-b581-ef17341052bf" class="bulleted-list"><li style="list-style-type:circle">míry - jak moc? (velmi, trochu…)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8003-99e5-c24c7d830b4f" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Dělení podle vzniku:</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8066-a68e-e32d133e3aa6" class="bulleted-list"><li style="list-style-type:circle">deadjektivní příslovce - z přídavných jmen (adjektiv) → příjemně, dobře, vesele,<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8077-9832-ce53f085ba5c" class="bulleted-list"><li style="list-style-type:square">jdou stupňovat stejně, jako adjektiva - zdravě, zdravěji, nejzdravěji…</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8086-98ec-d1f74e4848ca" class="bulleted-list"><li style="list-style-type:circle">zájmenná příslovce - ze zájmen → tu/hle, tam, onehdy,</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8011-9643-c1165e2d886c" class="bulleted-list"><li style="list-style-type:circle">příslovečné spřežky - spojením předložky a jiného jména → nahoru, zcela, sbohem</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-808e-bfdf-cde8afe439de" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">predikativa</mark> - součást sponového přísudku - “Je <span style="border-bottom:0.05em solid">chladno</span>”, většinou -o</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8042-9fe2-f7eb9a654c5e" class=""><mark class="highlight-orange">Předložky</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80c1-a06d-fe934b982419" class="bulleted-list"><li style="list-style-type:disc">prepozice,</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8073-93d5-cb71df3239d4" class="bulleted-list"><li style="list-style-type:disc">neplnovýznamový druh, není větný člen,</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-802f-a299-e785ec759f6c" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Druhy:</span><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-808b-a7fc-d10e8dec4ec1" class="bulleted-list"><li style="list-style-type:circle">vlastní (primární) → v, s, z, do, při, nad…</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80fc-b077-e2075c0e4e5d" class="bulleted-list"><li style="list-style-type:circle">nevlastní (sekundární) - vznik z jiných slov ↓<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-803a-ad45-d2b82183544d" class="bulleted-list"><li style="list-style-type:square">z podstatných jmen → krom, místo…</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d7-9292-ee92419ab7be" class="bulleted-list"><li style="list-style-type:square">z příslovců → blízko, proti… (Stojíš moc blízko. - příslovec X Bylo to blízko domu. (předložka),</li></ul></div></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-802c-b145-fe063af920c0" class=""><mark class="highlight-orange">Spojky</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80af-95ca-db8ca4dc43b9" class="bulleted-list"><li style="list-style-type:disc">konjunkce </li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80ee-9f74-dad1dd38fc8a" class="bulleted-list"><li style="list-style-type:disc">neplnovýznamový slovní druh</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80bb-93cc-e50350cab48d" class="bulleted-list"><li style="list-style-type:disc">druhy sloves<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800e-9a3d-e92ab7ad053a" class="bulleted-list"><li style="list-style-type:circle">souřadící - spojují dva větné členy nebo věty v poměru souřadném (a, i, nebo, ale, avšak)</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8042-ae8c-e30a08e30fa3" class="bulleted-list"><li style="list-style-type:circle">podřadicí - připojují vedlejší věty v souvětí k větě hlavní v poměru podřadném (když, protože)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-8040-8717-da53c77afd9e" class=""><mark class="highlight-orange">Částice</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8000-8922-f966dac21e45" class="bulleted-list"><li style="list-style-type:disc">partikule</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8038-a292-d4310c39c2b1" class="bulleted-list"><li style="list-style-type:disc">jejich jedinej ucel je upresnit nejakej duraz, formovat vztah k něčemu, atd. je potřeba se dívat jakej smysl to slovo v tý větě má. vetsinou kdyz to oddelas tak to furt dava smysl:<div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80b0-b4ca-c547fb8f1dde" class="bulleted-list"><li style="list-style-type:circle">Tak s námi jednat nemůžete (tak jako tímto způsobem, bez toho by to změnilo význam) x Tak už přestaň konečně plivat! (Přestaň konečne plivat! je to stejný)</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8029-b497-e7c10fa6c033" class="bulleted-list"><li style="list-style-type:disc">neplnovýznamový slovní druh</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8030-84c6-eb931edb8bbc" class="bulleted-list"><li style="list-style-type:disc">často silně expresivně zabarvené</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-801a-b41d-c9f9ee04423b" class="bulleted-list"><li style="list-style-type:disc">např. ať, kéž, copak</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-800b-acaf-c1168114553b" class="bulleted-list"><li style="list-style-type:disc">některá slova jsou VŽDY částicemi (kéž, zajisté, nechť, asi, snad)</li></ul></div><div style="display:contents" dir="auto"><h3 id="205a9ca5-ff1e-80b5-8119-f585b223fd37" class=""><mark class="highlight-orange">Citoslovce</mark></h3></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8079-bdc4-d1caddca4398" class="bulleted-list"><li style="list-style-type:disc">interjekce</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80d7-83c1-e2e46f542f2e" class="bulleted-list"><li style="list-style-type:disc">silná expresivita</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-8094-9165-c8d96c323ef3" class="bulleted-list"><li style="list-style-type:disc">vyjadřují nálady, pocity, vůli mluvčího</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80a2-8599-fbfd17bd17c1" class="bulleted-list"><li style="list-style-type:disc">dělení: <div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-806c-82b6-dd8b97df7686" class="bulleted-list"><li style="list-style-type:circle">pocitová - hurá, ach jo, fuj</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80e8-ba23-c2659387ebff" class="bulleted-list"><li style="list-style-type:circle">kontaktová - hej, člověče, pozor</li></ul></div><div style="display:contents" dir="auto"><ul id="205a9ca5-ff1e-80b6-a5ed-e73c42d904d6" class="bulleted-list"><li style="list-style-type:circle">zvukomalebná - hepčí, mňau, cink</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><p id="205a9ca5-ff1e-8026-a5aa-d890834030df" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

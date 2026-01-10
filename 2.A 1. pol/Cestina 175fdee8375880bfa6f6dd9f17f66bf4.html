@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Cestina</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="175fdee8-3758-80bf-a6f6-dd9f17f66bf4" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">😭</span></div><div style="display:flex;justify-content:space-between;align-items:baseline"><h1 class="page-title" dir="auto">Czech</h1><button style="background:none;border-width: 1px;border-color: rgba(55, 53, 47, 0.6);color:rgba(55, 53, 47, 0.6);font-size:1rem;cursor:pointer;" onclick="location.href='../index.html'">Zpět</button></div><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-802d-ae9f-eb773024c8ca" class="link-to-page"><a href="Cestina/1%20Ruchovci%20a%20lumirovci%20175fdee83758802dae9feb773024c8ca.html"><span class="icon">🏰</span>1. Ruchovci a lumirovci</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-8055-9d21-c7c3518c9cba" class="link-to-page"><a href="Cestina/2%20Cesky%20realismus%20175fdee8375880559d21c7c3518c9cba.html"><span class="icon">😠</span>2. Cesky realismus</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-80e2-8cc8-ef444b682266" class="link-to-page"><a href="Cestina/3%20SLM%20-%20impresionismus,%20symbolismus%20175fdee8375880e28cc8ef444b682266.html"><img class="icon notion-static-icon" src="https://www.notion.so/icons/fleur-de-lis_purple.svg"/>3. SLM - impresionismus, symbolismus</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-8019-8da9-e192d522fc2c" class="link-to-page"><a href="Cestina/4%20SLM%20-%20dekadence,%20civilismus%20175fdee8375880198da9e192d522fc2c.html"><img class="icon notion-static-icon" src="https://www.notion.so/icons/hammer_green.svg"/>4. SLM - dekadence, civilismus</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-8000-b964-e0bf685fbdee" class="link-to-page"><a href="Cestina/5%20Ceska%20moderna%20175fdee837588000b964e0bf685fbdee.html"><span class="icon">🇨🇿</span> 5. Ceska moderna</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-80c7-9162-d24d481dcf81" class="link-to-page"><a href="Cestina/6%20Burici%20a%20anarchiste%20-%20V%20Dyk%20175fdee8375880c79162d24d481dcf81.html"><span class="icon">🛴</span>6. Burici a anarchiste - V. Dyk</a></figure></div><div style="display:contents" dir="ltr"><figure id="175fdee8-3758-8092-a27c-d9f568eb0353" class="link-to-page"><a href="Cestina/7%20Frazem,%20frazeologie%20175fdee837588092a27cd9f568eb0353.html"><span class="icon">🍺</span>7. Frazem, frazeologie</a></figure></div><div style="display:contents" dir="auto"><ul id="177fdee8-3758-80cf-926f-e9027079b670" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Alegorie </mark>= zjednoduseni sloziteho, abstraktni dela konkretnim, např. komenskej vyobrazil svět jako město</li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-8098-a862-eeb45b2b246a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Satira </mark>= zesměšnění</li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-809b-ae84-d379167b7bff" class="bulleted-list"><li style="list-style-type:disc">Lyrika<div style="display:contents" dir="auto"><ul id="179fdee8-3758-8051-82b3-f21d420d7d66" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Intimní </mark>- Láska bez fyzického kontaktu, spíš mateřská</li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-80d2-9a0c-dc34501fb85b" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Milostná </mark>- Láska i fyzická, partnerská</li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-8058-be72-c442e6e16ac5" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Přírodní </mark>- Popis krásy přírody</li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-8043-9f3b-f049988b8cdb" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Reflexivní </mark>- Sebe-reflexe</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="179fdee8-3758-80d1-8878-c959adfbea7d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Euforie </mark>- pocit velké, obvykle přehnané, radosti, štěstí</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-805c-8b7f-eb4db74268c6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">eufonie </mark>- libozvuk, umělecky působivé uspořádání hlásek</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8029-9cf4-f670b4f1db2e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Volný x vázaný verš</mark> - <div style="display:contents" dir="auto"><ul id="17afdee8-3758-80dd-83aa-ee8e78a3696a" class="bulleted-list"><li style="list-style-type:circle">vázaný - střídání přízvuků, stejný počet slabik</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80d8-8cef-d7ea68543600" class="bulleted-list"><li style="list-style-type:circle">volný - pravý opak, nestřídá se důraz, bez pravidel, rým zachován</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f0-b112-d23efbec6f71" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Eufemismus </mark>- zjemnění vrazu, zlehčuje, zkrášluje</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-802b-9c5d-ee19e31a209c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Synestezie </mark>- cítění pomocí jinýho smyslu než kterým to vnímáš (např. hudba, zvuk → barva. Slovo → chuť, zrak → hmat)</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8033-b5ff-cfe19fcd932a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Satira </mark><mark class="highlight-default">-</mark> zesmesneni</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8037-ba02-e4f1b00fa19a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Sarkasmus </mark><mark class="highlight-default">-</mark> jedovate, kousave zesmesneni</li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80a7-8b99-d855ffbdf25a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">ironie </mark><mark class="highlight-default">-</mark> zesmesneni opakem</li></ul></div><div style="display:contents" dir="auto"><p id="17afdee8-3758-8022-85f2-eb3c39301316" class="">anarchismus - Propagovali přirozenou lásku, detabuizovali <a href="https://cs.m.wikipedia.org/wiki/Sexualita">sexualitu</a>, kritizovali tradiční <a href="https://cs.m.wikipedia.org/wiki/Man%C5%BEelstv%C3%AD">manželství</a>.<a href="https://cs.m.wikipedia.org/wiki/Anarchisti%C4%8Dt%C3%AD_bu%C5%99i%C4%8Di#cite_note-3">[3]</a> Vedli <a href="https://cs.m.wikipedia.org/wiki/Boh%C3%A9mstv%C3%AD">bohémský</a> <a href="https://cs.m.wikipedia.org/wiki/%C5%BDivot">život</a></p></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-800f-a00d-cb87f4198062" class=""><br/><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Ruchovci</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-8081-ad67-f960bc464a2d" class=""><mark class="highlight-orange">Svatopluk Čech</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8057-be0a-c6b524631c4e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Poezie</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-808f-9d14-d7c887f3b95f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Lešetínský kovář</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80e1-9a64-d8c882972364" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Hanuman</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80d8-9973-ce2b680c62cf" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Evropa a Slavie</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-806f-88b2-c7ffb05ab595" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Próza</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8021-8ad3-eacb7fcb7b5d" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Broučkidády</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-80f9-9dcb-cd108bbddf0e" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Lumírovci</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-8075-a3f4-c38351f6c5de" class=""><mark class="highlight-orange">Josef Václav Sládek</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80de-bf4d-ee8b72978b3a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Na hrobech indiánských</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80ca-b894-f2097e234366" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Poezie</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8031-bdee-fe6f6ec912ac" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Světlou stopou</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80c5-8005-c718257cb716" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Na prahu ráje</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-801b-b375-f0ad7d17ca9f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Selské písně</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80c2-b9da-f0b05f817cd4" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Velké, širé, rodné lány</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80b7-acd4-f922991197a7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Poezie pro děti</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80dc-b7e2-f6bdcb4257f3" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Zvony a zvonky</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8098-9132-ff856fcf8095" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">3) Překlady</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8084-bfe4-f71078de049f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">Shakespeare, Poe, Shelly, Byron</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-8043-992c-d05579b19383" class=""><mark class="highlight-orange">Jaroslav Vrchlický</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f7-91a5-cddef94db1d0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Překlady</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-802b-9bae-c3389f0ce1cc" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">Hugo, Baudelaire, Rimbaud, Byron</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80d6-b53a-ec809dc637fe" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Dramata</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8080-98c1-de089e15c0d7" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Noc na Karlštejně</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80ec-80e6-e3581ada9bd1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">3) Poezie</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80d7-a3a5-d87481fb4d31" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Poutí k Eldorádu</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-807e-b126-c5672ce0dc91" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Okna v bouři</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80d1-9c4e-dfe76855f609" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Meč Damoklův</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80a1-b933-ede4ccae51e7" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Zlomky epopeje</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-8003-a9d0-f38f9eea1985" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Český realismus</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-8000-9f62-e588e15c9fab" class=""><mark class="highlight-orange">Alois Jirásek</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8026-8597-cd7d0861d60d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Doba mýtů a pověstí</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-809d-a6be-f0fcd9f59e13" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Staré pověsti české</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80ff-b9ab-e44bafcaa1ba" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Husitské období</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-809e-a20f-ee4a22ea00be" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Mezi proudy</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80be-b7ce-cdedce8e7122" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Proti všem</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8059-8df3-eb39607683de" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Z Čech až na konec světa</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-806a-92f8-f2ae8c83ca2d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">3) Doba temna</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-806d-8e31-d7b8c55f3a6a" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Temno</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-807f-9186-e4a5e868747a" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Psohlavci</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8092-b24b-ed932ba45f2b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">4) Období národního obrození</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80a0-ba91-e96641a0f540" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">F. L. Věk</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-809a-b6c8-c25e3928dd5b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">5) Drama</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-802f-835f-eab8b596f8cb" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Lucerna</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-802d-983c-c7c30502a469" class=""><mark class="highlight-orange">Alois a Vilém Mrštníkové</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f5-82de-cb36ba6c4e98" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1)</mark><mark class="highlight-orange"> </mark><mark class="highlight-teal">Realistické drama</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8005-891f-fb52a8c02c54" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Maryša</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-80b4-8313-f2354f37cbc8" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Impresionismus</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-80f6-8fab-f6e49ecd28e2" class=""><mark class="highlight-orange">Antonín sova</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8097-9ee9-e58d9b550c85" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Olše</mark></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-800a-8452-c94b1fc3e357" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Symbolismus</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-80ed-90cc-c01d88826efa" class=""><mark class="highlight-orange">Charles Baudelaire</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8066-b549-fb093673f325" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Květy zla</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8032-bc54-d72fcffde93f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Zdechlina</mark></li></ul></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-808d-8532-c9635ee9d8eb" class=""><mark class="highlight-orange">Paul Verlaine</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8008-8138-e82ca42263ca" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1)</mark><mark class="highlight-orange"> </mark><mark class="highlight-teal">Saturnské básně</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80a1-9e49-c951866c293c" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Podzimní píseň</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-80c5-a40e-d622b0d3e0f9" class=""><mark class="highlight-orange">Jean Arthur Rimbaud</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f4-8276-fe28cd427b43" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) sbírka Iluminace</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80cf-bb38-c2a1c96d8c40" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Opilý koráb</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8069-b999-ca189673a0de" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Mé bohémství</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80e0-8350-c1bb5a062e87" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Spáč v úvalu</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-80d8-b456-fee91d13aeba" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Dekadence</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-80a8-801b-e77461a4edad" class=""><mark class="highlight-orange">Oscar Wilde</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80b7-8ccf-da34814308d1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Obraz Doryana Graye</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-802a-997a-c74c5d3d830a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">Šťastný princ</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f2-a2eb-f9798db393cb" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Šťastný princ</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8050-b361-ec97f35a11be" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Slavík a růže</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8028-b180-d0d1f8870b5b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Jak je důležité míti Filipa</mark></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-800d-a766-cdf992ca050e" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Civilismus</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-8021-a5e8-fb6416a7e721" class=""><mark class="highlight-orange">Walt Whitman</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8067-849f-eb6ef1e5fae7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Stébla trávy</mark></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-809d-9713-c741ec42a109" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Česká Moderna</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-80d7-94b9-ed56c42dc832" class=""><mark class="highlight-orange">Antonín Sova</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f6-b097-e60bcc38b9c7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Impresionismus</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8057-a7ec-e1dfc1755a47" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Květy intimních nálad</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80c5-8310-f2b5ee149f63" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Symbolismus</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8027-b0a3-fddaaf388ee6" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Ještě jednou se vrátíme</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8045-8162-eec7b4d174a0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Kdo Vám tak zcuchal tmavé vlasy?</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-808b-abb6-d6bbe3ec3c5a" class=""><mark class="highlight-orange">Otokar Březina</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8022-8003-fc22f1e9b44e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Svítání na západě</mark></li></ul></div><div style="display:contents" dir="auto"><h2 id="17afdee8-3758-8041-8c0e-fed47c7e14d2" class=""><mark class="highlight-red"><strong><span style="border-bottom:0.05em solid">Buřiči a Anarchisté</span></strong></mark></h2></div><div style="display:contents" dir="auto"><h3 id="17afdee8-3758-805f-a1db-ed3fac82e262" class=""><mark class="highlight-orange">Viktor Dyk</mark></h3></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-80f4-88aa-e80374f3ebd8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">1) Poezie</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8081-af69-d5ffcb772ed5" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Satiry a Sarkasmy</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8057-95b7-d803d4707d83" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Pohádky z naší vesnice</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8068-802c-f7992f006148" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Milá sedmi loupežníků</mark></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-806d-bac0-e8b24fd33d06" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Země mluví</mark></li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8011-86bc-ca6c653cabd5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">2) Próza</mark><div style="display:contents" dir="auto"><ul id="17afdee8-3758-8068-8888-d009f6e643e4" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue">Krysař</mark></li></ul></div></li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
